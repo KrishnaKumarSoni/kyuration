@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Pin - Saved Items</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body class="bg-white font-jakarta">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 border-r border-gray-200">
+            <div class="p-4">
+                <h1 class="text-2xl font-bold text-gray-800 font-playfair">Knowledge Pin</h1>
+            </div>
+            <nav class="mt-4">
+                <h2 class="px-4 py-2 text-sm font-semibold text-gray-600 uppercase">Lists</h2>
+                <ul id="listNav" class="space-y-1">
+                    <!-- List items will be dynamically added here -->
+                </ul>
+            </nav>
+            <div class="mt-8 p-4">
+                <h2 class="mb-2 text-sm font-semibold text-gray-600 uppercase">Filters</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Tags</label>
+                        <select id="tagFilter" class="mt-1 block w-full" multiple>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700">Platforms</label>
+                        <select id="platformFilter" class="mt-1 block w-full" multiple>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 overflow-auto">
+            <header class="bg-white border-b border-gray-200">
+                <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <h1 id="currentList" class="text-3xl font-bold text-gray-900 font-playfair">All Items</h1>
+                </div>
+            </header>
+            <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+                <div id="itemsContainer" class="masonry">
+                    <!-- Saved items will be dynamically added here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+</body>
+</html>

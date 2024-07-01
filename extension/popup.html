@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knowledge Pin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+    <div id="content" class="hidden">
+        <div class="header">
+            <div class="domain-container">
+                <span id="websiteTitle"></span>
+            </div>
+            <button id="closeBtn" class="close-btn">&times;</button>
+        </div>
+        <div class="image-container">
+            <img id="pageImage" class="page-image" src="" alt="Page thumbnail">
+            <button id="removeImageBtn" class="remove-image-btn">&times;</button>
+        </div>
+        <input id="pageTitle" class="title-input" type="text" placeholder="Title">
+        <div class="section">
+            <label for="listSelect">Lists</label>
+            <div class="custom-select">
+                <select id="listSelect" class="select-field">
+                    <option value="">Select a list</option>
+                </select>
+            </div>
+        </div>
+        <div class="section">
+            <label for="tagsInput">Tags</label>
+            <div id="tagsContainer" class="tags-container"></div>
+            <input id="tagsInput" class="input-field" type="text" placeholder="Enter a tag name">
+        </div>
+        <div class="section">
+            <label for="noteInput">Note</label>
+            <textarea id="noteInput" class="input-field" rows="3" placeholder="I learned that..."></textarea>
+        </div>
+        <button id="saveBtn" class="save-btn">save</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

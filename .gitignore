@@ -1,0 +1,11 @@
+# Ignore environment files
+backend/.env
+backend/venv/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore logs and other system files
+*.log
+backend/__pycache__/
+*.pyc
